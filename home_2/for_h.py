@@ -1,5 +1,6 @@
 #Ввести с клавиатуры строку.
 #Вывести эту же строку вертикально: по одному символу на строку консоли.
+import itertools
 
 list_1 = [11, 12, 51, 66, 74, 342, 2222, 523, 0, 9]
 for x in list_1:
@@ -20,6 +21,23 @@ student = [{'school_class': '666F', 'progress': [5, 4, 2, 5, 3]},
 {'school_class': '7E', 'progress': [2, 2, 2, 4, 5]},
 {'school_class': '2G', 'progress': [5, 4, 4, 5, 5]}]
 
+score = 0
+summ = 0
+for dicts in student:
+    a = dicts.get('progress')
+    b = dicts.get('school_class') 
+    c = sum(a)/len(a)
+    print(f'средний балл по классу {b} - {c}')
+    summ1 = 0
+    for  mark in a:
+        summ1 += mark
+    score += summ1  #сумма оценок по школе
+    for progr in a:
+        summ +=1     # кол-во оценок по школе
+print(f'средний балл по школе - {float(score/summ)}') 
+
+
+'''
 sum = 0
 sum1 = 0
 sum2 = 0
@@ -57,4 +75,4 @@ for k in t:
     sum4+=k
     b4 = len(t)
 print ('средний бал по классу', student[3]['school_class'], '-', sum4/b4)
-
+'''

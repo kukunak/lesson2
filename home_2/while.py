@@ -22,6 +22,8 @@ def ask_user():
             break
         else:
             print(f'Твой ответ {question} меня не устраивает')
-ask_user()
+if __name__ == '__main__':
+    ask_user()
+
 
     

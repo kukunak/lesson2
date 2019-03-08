@@ -10,9 +10,9 @@ def func(line1, line2):
         return 0 
     elif line1 == line2:
         return 1
-    elif line1 !=line2 and len(line1) > len(line2):
+    elif line1 != line2 and len(line1) > len(line2) and line2 != 'learn':
         return 2
-    elif line1 !=line2 and line2 == 'learn':
+    elif line1 != line2 and line2 == 'learn':
         return 3
     
     
@@ -22,3 +22,7 @@ print(func('why me', 'hot'))
 print(func('join', 'learn'))
 print(func('try', 'python'))
 print(func('python', 'python'))
+print(func('123456', 'learn'))
+print(func('learn', 'learn'))
+print(func('12345', 'еearn')) # если в 11 строчке поставить len, тогда здесь на выходе 
+# будет 1, но содержимое строк разное, а так выведет None
